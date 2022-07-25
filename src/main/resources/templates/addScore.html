@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Spring Akkasls Leaderboard</title>
+
+</head>
+<body>
+<div class="d-flex justify-content-center">
+    <div class="border-dark border-secondary card" style=" margin-top: 5%; min-width: 40%">
+        <div class="card-header text-center">
+            Add Player and Score
+        </div>
+        <form th:action="@{/save}" method="post" th:object="${playerDetails}">
+            <div class="form-group" style="margin-left: 10%; margin-top: 5%; margin-right: 10%">
+                <input type="text" class="form-control" th:field="*{leaderBoardId}" placeholder="Leaderboard ID">
+            </div>
+            <div class="form-group" style="margin-left: 10%; margin-right: 10%">
+                <input type="text" class="form-control" th:field="*{playerId}" placeholder="Player ID">
+            </div>
+            <div class="form-group" style="margin-left: 10%; margin-right: 10%">
+                <input type="text" class="form-control" th:field="*{playerName}" placeholder="Player Name">
+            </div>
+            <div class="form-group" style="margin-left: 10%; margin-right: 10%">
+                <input type="text" class="form-control" th:field="*{playerScore}" placeholder="Player Score">
+            </div>
+            <div class="form-group" style="margin-left: 10%; margin-right: 10%">
+                <button type="submit" class="btn btn-danger">Submit</button>
+            </div>
+
+        </form>
+    </div>
+</div>
+</body>
+</html>
