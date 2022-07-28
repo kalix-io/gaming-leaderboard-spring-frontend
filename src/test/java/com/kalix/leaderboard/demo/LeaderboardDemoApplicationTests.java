@@ -1,4 +1,4 @@
-package com.akkasls.leaderboard.demo;
+package com.kalix.leaderboard.demo;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
